@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Dosis', sans-serif;
+    list-style: none;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4%;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #323232;
+}
+
+.bold{
+    font-weight: 700;
+    color: #ff7f01;
+}
+
+.nav{
+    display: flex;
+}
+
+.nav li{
+    position: relative;
+}
+
+.nav a{
+    padding: 10px 27px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #323232;
+}
+
+.nav a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -3px;
+    left: 0;
+    transition: ease .40s;
+    background-color: #ff7f01;
+}
+
+.icons i{
+    color: #323232;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.icons {
+    display: none;
+}
+.nav a:hover::after{
+    width: 100%;
+}
+.search-bar input{
+    border: none;
+    outline: none;
+}
+
+.search-bar{
+    border: 1px solid #ccc;
+    padding: .5rem 1rem;
+    border-radius: .8rem;
+}
+
+@media (max-width:1036px){
+    .nav{
+        position: absolute;
+        top: 99%; left: 0; right: 0;
+        border-bottom: .1rem solid #ff7f01;
+        border-top: .1rem solid #ff7f01;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: ease .40s;
+    }
+    .nav.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .nav{
+        margin: 2rem;
+        display: inline;
+        text-align: center;
+        padding: 1rem;
+    }
+    .search-bar{
+        position: absolute;
+        top: -99%;
+    }
+
+    .icons{
+        display: inline;
+    }
+}
+
+@media (max-width:300px){
+    .logo{
+        font-size: 1.8rem;
+    }
+}
