@@ -193,10 +193,24 @@ html{
     .image{
         width:100%;
     }
+    .image img{
+        height: 60vh;
+    }
     .home{
         padding-top: 7rem;
     }
     .fa-bars{
         font-size: 1.6rem;
+    }
+}
+
+@media (max-width:386px){
+    .top-skill i{
+        padding: .7rem;
+        font-size: 1.2rem;
+    }
+
+    .top-skill h2{
+        font-size: 1.4rem;
     }
 }
