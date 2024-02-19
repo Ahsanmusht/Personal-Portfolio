@@ -1,165 +1,170 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Flow+Circular&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Dosis:wght@200;300;400;500;600;700;800&family=Flow+Circular&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Dosis', sans-serif;
-    list-style: none;
+    font-family: "Nunito Sans", sans-serif;
+}
+
+html{
+    font-size: 65%;
 }
 
 .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 4%;
+    align-items: center;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 4%;
 }
 
 .logo{
-    font-size: 2rem;
-    color: #323232;
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: 200;
 }
 
-.bold{
-    font-weight: 700;
-    color: #ff7f01;
+.highlight{
+    font-weight: 900;
 }
 
-.nav{
+.navbar{
     display: flex;
+    flex-direction: row;
+    gap: 2rem;
 }
 
-.nav li{
-    position: relative;
-}
-
-.nav a{
-    padding: 10px 27px;
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: #323232;
-}
-
-.nav a::after{
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -3px;
-    left: 0;
-    transition: ease .40s;
-    background-color: #ff7f01;
-}
-
-.icons i{
-    color: #323232;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-.icons {
-    display: none;
-}
-.nav a:hover::after{
-    width: 100%;
-}
-.search-bar input{
-    border: none;
-    outline: none;
-}
-
-.search-bar{
-    border: 1px solid #ccc;
-    padding: .5rem 1rem;
-    border-radius: .8rem;
-}
-
-.home{
-    padding: 2rem 4%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.content{
-    width: 50%;
-}
-
-.content h1{
-    font-size: 3rem;
-    color: #323232;
-    padding-bottom: .5rem;
-}
-
-.content p{
-    font-size: 1.2rem;
-    color: #555;
-    line-height: 1.5;
-    padding-bottom: 1rem;
-}
-
-.btn{
-    padding: .8rem 1.3rem;
-    border-radius: .9rem;
-    border: none;
-    outline: none;
-    font-size: 1.1rem;
-    background: transparent;
-    border: 1px solid #ff7f01;
-    color: #ff7f01;
-    transition: ease .40s;
-    cursor: pointer;
-}
-
-.btn i{
-    margin-left: .2rem;
-}
-
-.btn:hover{
-    background-color: #ff7f01;
+.fa-bars{
+    font-size: 1.5rem;
     color: #fff;
 }
 
-.btn:hover,i{
-    margin-left: .5rem;
+.icons{
+    
+    display: none;
 }
 
-.image{
+.navbar a{
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    gap: .5rem;
+    font-size: 1.5rem;
+}
+
+.navbar a i{
+    font-size: 2rem;
+    color: #fff;
+}
+
+
+.home{
+    padding-top: 5rem;
+    width: 100%;
+    background: #5C1324;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.content, .image{
     width: 45%;
 }
 
 .image img{
     width: 100%;
+    height: 95vh;
+}
+
+
+.content h1{
+    font-size: 4.4rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.diff-font{
+    font-family: "Dancing Script", cursive;
+}
+
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 75%;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+
+.search-bar input{
+    width: 100%;
+       padding-left: 1.5rem;
+    border: none;
+    outline: none;
+}
+
+.search-bar i{
+    background-color: #19a463;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.top-skill{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+}
+
+.top-skill h2{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.top-skill a{
+    padding: 1rem;
+    border-radius: 50px;
+    font-size: 1.5rem;
+    color: #fff;
+    border: 1px solid #fff;
+    transition: .4s ease-in-out;
+}
+
+.top-skill a:hover{
+    background-color: #fff;
+    color: #5C1324;
 }
 
 @media (max-width:1036px){
-    .nav{
+    html{
+        font-size: 55%;
+    }
+    .navbar{
         position: absolute;
         top: 99%; left: 0; right: 0;
-        border-bottom: .1rem solid #ff7f01;
-        border-top: .1rem solid #ff7f01;
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: ease .40s;
-        background-color: #fff;
+        background-color: #561020;
     }
-    .nav.active{
+    .navbar.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
-    .nav{
-        display: inline;
+    .navbar{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
         padding: 1rem;
-    }
-    .nav li{
-        margin-top: 1rem;
-    }
-    .search-bar{
-        position: absolute;
-        top: -99%;
     }
 
     .icons{
@@ -167,36 +172,31 @@
     }
 }
 
-@media (max-width:848px){
+@media(max-width:1186px){
     .home{
         flex-direction: column-reverse;
-        padding-top: 5rem;
+        padding: 5rem 4%;
     }
 
     .content{
         width: 100%;
-        text-align: center;
     }
-    .image{
-        width: 100%;
-    }
+
+
 }
 
-@media (max-width:300px){
-    .logo{
-        font-size: 1.8rem;
-    }
 
-
-    .content h1{
-        font-size: 2rem;
+@media(max-width:476px){
+    html{
+        font-size: 45%;
     }
-    .content p{
-        font-size: 1rem;
+    .image{
+        width:100%;
     }
-
-    .btn{
-        padding: .5rem 1rem;
-        font-size: 1rem;
+    .home{
+        padding-top: 7rem;
+    }
+    .fa-bars{
+        font-size: 1.6rem;
     }
 }
